@@ -1,0 +1,76 @@
+#rightSideNav {
+    display: none;
+
+    @include respondTo(md) {
+        display: block;
+        padding-right: 1.5rem;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
+        right: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        writing-mode: vertical-rl;
+    }
+
+    @include respondTo(lg) {
+        padding-right: 3rem;
+    }
+    
+    #mailContainer {
+        display: flex;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        padding: 0 0.5rem;
+
+        a {
+            font-size: 1.15rem;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+            transform: translateY(0px);
+            transition: 0.4s;
+            color: #a8b2d1;
+            
+            &:hover {
+                transition: 0.4s;
+                transform: translateY(-4px);
+                color: $DcColor-2;
+            }
+        }
+        
+        &::after {
+            display: block;
+            content: "";
+            width: 1px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #a8b2d1;
+        }
+    }
+}
+
+.rightSideNav {
+    @include respondTo(md) {
+        // transform: translateX(200px);
+    }
+}
+
+.light {
+    #rightSideNav {
+        #mailContainer {
+            background-color: #333;
+            a {
+                color: #a8b2d1;
+                
+                &:hover {
+                    color: $DcColor-2;
+                }
+            }
+            
+            &::after {
+                background-color: #a8b2d1;
+            }
+        }
+    }
+}

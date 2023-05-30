@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Bénet</title>
+    <meta name="description" content="Simon Bénet, est un développeur d'applications web responsives, reférencées et accessibles avec des designs modernes et créatifs">
+
+    <meta name="copyright" content="Simon Bénet">
+    <meta name="author" content="Simon Bénet">
+
+    <!-- // ---- OG---- // -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simonbenet.com">
+    <meta property="og:site_name" content="Simon Bénet">
+    <meta property="og:title" content="Simon Bénet">
+    <meta property="og:description" content="Simon Bénet, est un développeur d'applications web responsives, reférencées et accessibles avec des designs modernes et créatif">
+    <meta property="og:locale" content="fr">
+    <meta property="og:image" content="https://simonbenet.com/img/og_index_page.png">
+    
+    <!-- // ---- Favicons---- // -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- // ---- ScriptJs CDN Gsap---- // -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+
+    <!-- // ---- ScriptJs ---- // -->
+    
+    <!-- <script src="assets/js/startAnimation.js" defer></script> -->
+    <script src="assets/js/persistantColorMode.js" defer></script>
+    <script src="assets/js/worksCardsConstructor.js" defer></script>
+    <script src="assets/js/dynamicModalConstructor.js" defer></script>
+    <script src="assets/js/progressionScrollBar.js" defer></script>
+    <script src="assets/js/readMoreTxtFrVersion.js" defer></script>
+    
+    <!-- // ---- Stylesheet ---- // -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+</head>
+
+<!-- // ---- Application Body ---- // -->
+<body class="dark">
+
+<!-- // ---- Application Header ---- // -->
+
+    <header id="mainHeader" class="default">
+        <div id="logoContainer">
+            <div id="logo" class="logo"><a href="#homeSection" title="lien d'acces rapide à la section 'Accueil'"><img src="/assets/img/pp+logo/SBT.png" alt="Logo de Simon Bénet"></a></div>
+        </div>    
+        <div id="dotContainer">
+            <span id="enMode" class="headerActionSpanDot enMode" title="English version"><a href="enVersion.html"><img src="/assets/img/svg/uk_flag.svg" alt="Icone du drapeau du Royaume Uni au format svg"></a></span>
+            <span id="darkMode" class="headerActionSpanDot darkMode colorModeSpan noActive" title="Mode nuit"><img class="day-nightImg noActive" src="/assets/img/svg/moon.svg" alt="Icone lune au format svg"></span> 
+            <span id="lightMode" class="headerActionSpanDot lightMode colorModeSpan active" title="Mode jour"><img class="day-nightImg" src="/assets/img/svg/sun.svg" alt="Icone soleil au format svg"></span>
+            </div>
+        </div>
+
+<!-- // ---- Application Navbar ---- // -->
+
+        <nav id="navbar" class="dark">
+            <a id="navbarA1" class="navLink allNavLink" href="#aboutSection" title="lien d'accès rapide à la section 'a propos'"><span class="navbarSpan1">1.<span class="navbarSpan2">A propos</span><img id="aboutIcon" class="navIcon" src="/assets/img/svg/about.svg" alt="Icone 'à propos' au format svg"></span></a>
+            <a id="navbarA2" class="navLink allNavLink" href="#workSection" title="lien d'accès rapide à la section 'projets'"><span class="navbarSpan1">2.<span class="navbarSpan2">Mes projets</span><img id="checkIcon" class="navIcon" src="/assets/img/svg/check.svg" alt="Icone 'mes projets' au format svg"></span></a>
+            <a id="navbarA3" class="navLink allNavLink" href="#serviceSection" title="lien d'accès rapide à la section 'prestations'"><span class="navbarSpan1">3.<span class="navbarSpan2">Mes prestations</span><img id="handshakeIcon" class="navIcon" src="/assets/img/svg/handgear.svg" alt="Icone 'mes prestations' au format svg"></span></a>
+            <a id="navbarA4" class="navLink allNavLink" href="#moreSection" title="lien d'accès rapide à la section 'en savoir plus'"><span class="navbarSpan1">4.<span class="navbarSpan2">En savoir plus</span><img id="moreIcon" class="navIcon" src="/assets/img/svg/more.svg" alt="Icone 'en savoir plus' au format svg"></span></a>
+        </nav>
+                           
+<!-- // ---- Application Scroll Progression Bar ---- // -->
+
+        <div id="progressionScrollBar"></div>
+    </header>
+    
+<!-- // ---- Application Main ---- // -->
+    <main id="main" class="dark">
+
+<!-- // ---- Application "Home" section ---- // -->
+        <section id="homeSection" class="defaultSection">
+            <!-- <div id="homeSectionTopRightCornerDecoration"></div> -->
+            <header id="homeHeader" class="headerSection">
+                <p id="homeHeaderP" class="sectionP homeHeaderP">Bienvenue, je m'appelle</p>
+                <h1 id="mainH1" class="mainH1">Simon Bénet.</h1>
+                <h2 id="mainH2" class="mainH2"><span>Et je suis </span>développeur web front end.</h2>
+            </header>
+            <div id="homePContainer" class="homePContainer">
+                <p class="sectionP mep">Passionné et autodidacte, je <strong>conçois</strong> et <strong>développe</strong> des applications web <a class="openModal responsiveModal" role="dialog" title="Que veut dire 'responsive' ?"><strong>responsives</strong></a>, <a class="openModal accessibilityModal" role="dialog" title="Qu'est ce que l'accessibilité web ?"><strong>accessible</strong></a>, <a class="openModal seoModal" role="dialog" title="Que veut dire 'référencé' ?"><strong>référencées</strong></a> et <a class="openModal securityModal" role="dialog" title="'sécurisé', c'est à dire ?"><strong>sécurisées</strong></a>, avec des designs <strong>modernes</strong> et <strong>créatifs</strong>.<br/> 
+                Ma priorité est de proposer à tout type de profil, un support <strong>personnalisé</strong> et l'opportunité d'être présent sur le web.<br/>Adepte des "<a class="openModal agileModal" role="dialog" title="Que sont les méthodes Agiles et à quoi servent elles ?"><strong>méthodes Agiles</strong></a>", je vous assure un accompagnement selon vos besoins, durant tout le processus de création.
+                    <a id="homeCTA" href="#workSection" title="lien d'accès rapide vers mes projets">Mes Projets</a>
+                </p>
+                <div id="pixelPPContainer">
+                    <img id="ppImg" class="ppImg" src="/assets/img/pp+logo/simon_pixelart.png" alt="Image de Simon Bénet en pixel art">
+                </div>
+            </div>
+            <div id="scrollMouse" title="Scroller vers le bas">
+                <div id="scrollContainer"></div>
+            </div>
+            <!-- <div id="homeSectionBottomLeftCornerDecoration"></div> -->
+        </section>
+    
+<!-- // ---- Application "About" section ---- // -->
+        <section id="aboutSection" class="defaultSection">
+            <header id="aboutHeader" class="headerSection">
+                <h2 class="sectionH2"><div class="categoryNumber">1.</div>A propos<div class="categoryDecoration"></div></h2>
+            </header>
+            <div id="infoContainer" class="aboutSectionContentContainer">
+                <div id="ppContainer">
+                    <img id="pp" src="/assets/img/pp+logo/photo_simon.jpg" alt="Photo de Simon Bénet">
+                </div>  
+                <div id="speechContainer">  
+                    <p class="sectionP mep">Je débute mon apprentissage grâce au développement de jeux vidéo via l'école "<strong>GameCodeur</strong></a>" mais aussi à travers de multiples projets personnels. Par la suite je m'exerce au développement web avec les ateliers <strong>OpenClassroom</strong> et <a class="contentA" href="https://www.freecodecamp.org/MrDisco" target="_blank" rel="noopener noreferrer" title="Voir mon profile FreeCodeCamp"><strong>FreeCodeCamp<img class="externLinkImg" src="/assets/img/svg/link.svg" alt="icone de lien externe au format svg" /></strong></a>.<br />
+                    Afin de me professionnaliser, j'intègre la formation professionnelle "<strong title="'Sécurisation des Parcours Professionnels du Numérique'">SPPN</strong>" au sein de l'association "<a class="contentA" href="https://www.aliptic.net/accueil.html" rel="noopener noreferrer" target="_blank"><strong>ALIPTIC<img class="externLinkImg" src="/assets/img/svg/link.svg" alt="icone de lien externe au format svg" /></strong></a>" à Limoges et obtiens la certification 
+                    "<a id="opquastA" class="contentA " href="https://www.opquast.com/certification/" title="Qu'est ce que OPQUAST ?"  rel="noopener noreferrer" target="_blank"><strong>OPQUAST<img class="externLinkImg" src="/assets/img/svg/link.svg" alt="icone de lien externe au format svg" /></strong></a>" qui s'appuie sur le
+                    <a class="contentA " href="https://www.opquast.com/rendre-le-web-meilleur/vptcs/" title="Qu'est ce que le modèle VPTCS ?"  rel="noopener noreferrer" target="_blank"><strong>modèle VPTCS<img class="externLinkImg" src="/assets/img/svg/link.svg" alt="icone de lien externe au format svg" /></strong></a>.<br /> 
+                    En constante recherche de perfectionnement, et avec la volonté de repousser mes propres limites, je découvre quotidiennement de nouvelles techniques et technologies, afin de réaliser des projets de plus en plus aboutis.</p>  
+                </div>  
+                <button id="readMoreBtnFrVersion" class="readMoreBtnFrVersion" title="Cliquer pour afficher plus de texte">Afficher plus</button> 
+            </div>
+            <div id="grades-skillsMainContainer" class="aboutSectionContentContainer">
+                <div id="gradesContainer" class="grades-skillsContainer">
+                    <h3>Compétences</h3>
+                    <div class="grades-skills" id="skills">
+                        <ul>
+                            <li><img class="skillsIcons" src="/assets/img/svg/html.svg" alt="html 5 svg icone" title="HTML 5"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/css3.svg" alt="css 3 svg icone" title="CSS 3"><img class="skillsIcons"  src="/assets/img/svg/sass.svg" alt="sass svg icone" title="SASS"><img class="skillsIcons"  src="/assets/img/svg/bootstrap.svg" alt="bootsrap svg icone" title="Bootsrap"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/php.svg" alt="php svg icone" title="PHP"><img class="skillsIcons"  src="/assets/img/svg/mysql.svg" alt="mySql svg icone" title="mySql"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/lua.svg" alt="lua svg icone" title="LUA"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/javascript.svg" alt="javascripy svg icone" title="JavaScript"><img class="skillsIcons"  src="/assets/img/svg/nodejs.svg" alt="node js svg icone" title="NodeJS"><img class="skillsIcons"  src="/assets/img/svg/jquery.svg" alt="jquery svg icone" title="JQuery"></li>
+                        </ul>
+                        <ul>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/git.svg" alt="git svg icone" title="GIT"><img class="skillsIcons"  src="/assets/img/svg/docker.svg" alt="docker svg icone" title="Docker"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/json.svg" alt="json svg icone" title="JSon"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/gsap.svg" alt="gsap svg icone" title="Gsap"></li>
+                            <li><img class="skillsIcons"  src="/assets/img/svg/trello.svg" alt="trello svg icone" title="Trello"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="skillsContainer" class="grades-skillsContainer">
+                    <h3>Certifications</h3>
+                    <div class="grades-skills" id="certification">
+                        <ul>
+                            <li><strong>OPQUAST</strong></li>
+                            <li><strong>Web Responsive</strong></li>
+                        </ul>
+                    </div>
+                    <a id="certificationLink" rel="noopener" href="certification.html" target="_blank" title="Lien vers ma page de certification">Voir mes certifications</a>
+                </div>
+            </div>
+        </section>
+    
+<!-- // ---- Application "Work" section ---- // -->
+        <section id="workSection" class="defaultSection">
+            <header id="workHeader" class="headerSection">
+                <h2 class="sectionH2"><div class="categoryNumber">2.</div>Mes projets<div class="categoryDecoration"></div></h2>
+                <p class="sectionP" id="workP">Voici quelques exemples de projets que j'ai réalisé :</p>
+            </header>
+            <div id="mainWorksContainer">
+<!-- // ---- dynamique générative content in javascript "/workCardsConstructor.js" ---- // -->
+
+            </div>
+        </section>
+    
+<!-- // ---- Application "Service" section ---- // -->
+        <section id="serviceSection" class="defaultSection">
+            <header id="serviceHeader" class="headerSection">
+                <h2 class="sectionH2"><div class="categoryNumber">3.</div>Mes prestations<div class="categoryDecoration"></div></h2>
+            </header>
+            <!-- <div class="serviceContainer">
+                <h3 class="serviceTitle">Portfolio</h3>
+                <p class="sectionP">Un <strong>portfolio</strong> <strong>responsive</strong> avec blabla fait en <strong>html/sass/js</strong>  ou <strong>react/sass/...</strong></p>
+                <div class="serviceImgContainer">
+                    <img class="serviceImg" src="/assets/img/image1.png" alt="alt1">
+                    <img class="serviceImg" src="/assets/img/image2.png" alt="alt2">
+                    <img class="serviceImg" src="/assets/img/image3.png" alt="alt3">
+                </div>
+                <div class="scrollXAnimContainer">
+                    <div class="scrollXAnim"></div>
+                </div>
+            </div>
+            <div class="serviceDecoration"></div>
+            <div class="serviceContainer">
+                <h3 class="serviceTitle">Site vitrine</h3>
+                <p class="sectionP">Un <strong>site vitrine</strong> <strong>responsive</strong> avec blabla fait en <strong>html/sass/js</strong>  ou <strong>react/sass/...</strong></p>
+                <div class="serviceImgContainer">
+                    <img class="serviceImg" src="/assets/img/dubai.jpeg" alt="alt4">
+                    <img class="serviceImg" src="/assets/img/dubai.jpeg" alt="alt5">
+                    <img class="serviceImg" src="/assets/img/dubai.jpeg" alt="alt6">
+                </div>
+                <div class="scrollXAnimContainer">
+                    <div class="scrollXAnim"></div>
+                </div>
+            </div>    
+            <div class="serviceDecoration"></div> -->
+            <div id="serviceDescriptionMainContainer">
+                <div class="serviceDescriptionContainer">
+                    <img src="/assets/img/svg/balise.svg" alt="Icone de balise html au format svg" class="serviceIcons">
+                    <h3 class="serviceDescriptionTitle">Développement Web</h3>
+                    <p class="sectionP">Intégration web<br/>Création de sites sur mesure<br/>Maintenance, assistance<br/>HTML, CSS, SASS, Media queries, Javascript, JQuery, responsive design</p>
+                </div>
+                <div class="serviceDescriptionContainer">
+                    <img src="/assets/img/svg/design.svg" alt="Icone design au format svg" class="serviceIcons">
+                    <h3 class="serviceDescriptionTitle">Design</h3>
+                    <p class="sectionP">Proposition de charte graphique<br/>Design d'expérience (UX)<br/>Design d'interface (UI)<br/>Responsive design<br/>Moderne et créatif</p>
+                </div>
+                <div class="serviceDescriptionContainer">
+                    <img src="/assets/img/svg/help.svg" alt="Icone conseil au format svg" class="serviceIcons">
+                    <h3 class="serviceDescriptionTitle">Conseil</h3>
+                    <p class="sectionP">Responsive design, accessibilité, SEO<br/>Réservation de nom de domaine, hébergement et mise en ligne<br/>Développement, languages de programmation/librairies/framework</p>
+                </div>
+            </div>
+            <div class="serviceDecoration"></div>
+            <div class="serviceContainer">
+                <div id="adviceAndContact">
+                    <ul>
+                        <li>Vous êtes une entreprise et vous avez besoin de l'aide d'un <strong>Freelance</strong> ?</li>
+                        <li>Vous êtes entrepreneur et avez besoin d'être présent sur le web et <strong>mettre en avant votre marque</strong> ?</li>
+                        <li>Vous êtes un particulier et vous voulez votre propre <strong>site web</strong> ?</li>
+                        <li>Vous avez besoin d'aide sur <strong>un projet web</strong>?</li>
+                        <li>Vous voulez un <strong>conseil</strong> en <strong>réferencement</strong>, en  <strong> accessibilité</strong> ou encore en <strong> responsive design </strong>?</li>
+                        <li>Vous avez une question me concernant ou concernant le web en général ?</li>
+                    </ul>
+                    <a id="contactMe" href="mailto:hello@simonbenet.com" rel="noopener noreferrer" title="Envoyer un mail">Contactez moi</a>
+                </div>
+            </div>    
+        </section>
+    
+<!-- // ---- Application "More" section ---- // -->
+        <section id="moreSection" class="defaultSection">
+            <header id="moreHeader" class="headerSection">
+                <h2 class="sectionH2"><div class="categoryNumber">4.</div>En savoir plus<div class="categoryDecoration"></div></h2>
+                <p class="sectionP"></p>
+            </header>
+            <div id="moreSectionMainContainer">
+                <h3>Mes autres projets</h3>
+                <div>
+                    <a href="./inunaki.html" rel="noopener noreferrer nofollow" target="_blank">INUNAKI</a>
+                    <a href="./myPixelChest.html" rel="noopener noreferrer nofollow" target="_blank">MyPixelChest</a>
+                </div>  
+                <!-- <h3>Mes autres réseaux</h3>  
+                <ul>
+                    <li class="otherSocialLink">comeup<a href=""></a></li>
+                    <li class="otherSocialLink">codeur<a href=""></a></li>
+                </ul> -->
+            </div>
+        </section>
+    </main>
+
+<!-- // ---- Application left SideNav ---- // -->
+    <div id="leftSideNav" class="leftSideNav">
+        <ul>
+            <li class="socialLink">
+                <a href="https://www.linkedin.com/in/simon-b%C3%A9net/" title="Lien vers mon profil linkedin" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/linkedin.svg" alt="Logo linkedin au format svg">
+                </a>
+            </li>
+            <li class="socialLink">
+                <a href="" title="Lien vers mon profil fiverr" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/fiverr.svg" alt="Logo fiverr au format svg">
+                </a>
+            </li>
+            <li class="socialLink">
+                <a href="https://github.com/SimonBnt" title="Lien vers mon profil github" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/github.svg" alt="Logo github au format svg">
+                </a>
+            </li>
+            <li class="socialLink">
+                <a href="https://codepen.io/MrDisco" title="Lien vers mon profil codepen" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/codepen.svg" alt="Logo codepen au format svg">
+                </a>
+            </li>
+            <li class="socialLink">
+                <a href="" title="Lien vers mon profil facebook" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/facebook.svg" alt="Logo facebook au format svg">
+                </a>
+            </li>
+            <li class="socialLink">
+                <a href="" title="Lien vers mon profil instagram" rel="noopener noreferrer" target="_blank">
+                    <img src="/assets/img/svg/instagram.svg" alt="Logo instagram au format svg">
+                </a>
+            </li>
+        </ul>
+    </div>
+<!-- // ---- Application right SideNav ---- // -->
+
+    <div id="rightSideNav" class="rightSideNav">
+        <div id="mailContainer">
+            <a href="mailto:hello@simonbenet.com" rel="noopener noreferrer" title="Envoyer un mail">hello@simonbenet.com</a>
+        </div>
+    </div>
+
+<!-- // ---- Application Footer ---- // -->
+
+    <footer class="default" id="footerScrollEvent">
+        <div id="footerContentContainer">
+            <div id="specContainer">
+                <ul>
+                    <li><img src="/assets/img/svg/html.svg" alt="html 5 svg icone"></li>
+                    <li><img src="/assets/img/svg/sass.svg" alt="sass svg icone"></li>
+                    <li><img src="/assets/img/svg/javascript.svg" alt="javascript svg icone"></li>
+                </ul>
+            </div>
+            <p>Conçu et developpé en <time>2023 </time>par <strong>Simon Bénet</strong>.</p>
+            <address>Limoges, France</address>
+            <p id="companyName">Simon Bénet E.I</p>
+            <p>06 73 37 67 42</p>
+            <div id="information">
+                <a id="siret" href="#" rel="noopener noreferrer" target="_blank" title="Voir ma fiche d'établissement google">Siret { <strong>948 392 535 000 19</strong> }</a>
+                <a id="legalNotice" href="/frLegalNotice.html" rel="noopener noreferrer" target="_blank" title="Voir les mentions légales">@Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

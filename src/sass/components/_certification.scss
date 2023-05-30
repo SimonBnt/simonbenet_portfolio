@@ -1,0 +1,183 @@
+#certificationBody {
+    #certificationSliderSection {
+        #certificationContainer {
+            display: grid;
+            place-items: center;
+            position: relative;
+            
+            .certificationImg {
+                box-shadow: 0px 10px 20px -5px $boxShadow;
+                margin-top: 6rem;
+                max-width: 300px;
+                min-height: 380px;
+                max-height: 400px;
+                border: solid 2px $DcColor-3;
+                border-radius: 0.5rem;
+        
+                @include respondTo(sm) {
+                    margin-top: 6rem;
+                    max-width: 600px;
+                    max-height: 700px;
+                    min-height: 700px;
+                    min-width: 600px;
+                }
+
+                @include respondTo(md) {
+                    margin-top: 8rem;
+                    max-width: 600px;
+                    max-height: 800px;
+                    min-height: 800px;
+                    min-width: 600px;
+                }
+    
+                &.noActive {
+                    display: none;
+                }
+            }
+    
+            .slideDirectionContainer {
+                position: absolute;
+                font-size: 3rem;
+                color: $DcColor-1;
+                border-radius: 0.25rem;
+                text-align: center;
+                top: 55%;
+
+                @include respondTo(sm) {
+                    font-size: 4.5rem;
+                }
+
+                @include respondTo(md) {
+                    font-size: 6rem;
+                }
+            }
+            
+            #leftDirectionContainer {
+                left: 2%;
+
+                @include respondTo(sm) {
+                    left: 3.5%;    
+                }
+
+                @include respondTo(md) {
+                    left: 10%;
+                }
+
+                @include respondTo(lg) {
+                    left: 15%;    
+                }
+
+                @include respondTo(desktop) {
+                    left: 25%;
+                }
+    
+                #leftDirection {
+                    animation: left 1s infinite linear; 
+                }
+    
+                @keyframes left {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    50% {
+                        transform: translateX(-0.075rem);
+                        opacity: 0.75;
+                    }
+                    100% {
+                        transform: translateX(-0.15rem);
+                        opacity: 0.5;
+                    }
+                }
+
+                @include respondTo(sm) {
+
+                    @keyframes left {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        50% {
+                            transform: translateX(-0.25rem);
+                            opacity: 0.5;
+                        }
+                        100% {
+                            transform: translateX(-0.5rem);
+                            opacity: 0.25;
+                        }
+                    }
+                }
+            }
+    
+            #rightDirectionContainer {
+                right: 2%;
+
+                @include respondTo(sm) {
+                    right: 3.5%;
+                }
+
+                @include respondTo(md) {
+                    right: 10%;
+                }
+
+                @include respondTo(lg) {
+                    right: 15%;
+                }
+
+                @include respondTo(desktop) {
+                    right: 25%;
+                }
+    
+                #rightDirection {
+                    animation: right 1s infinite linear; 
+                }
+    
+                @keyframes right {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    50% {
+                        transform: translateX(0.075rem);
+                        opacity: 0.75;
+                    }
+                    100% {
+                        transform: translateX(0.15rem);
+                        opacity: 0.5;
+                    }
+                }
+
+                @include respondTo(sm) {
+
+                    @keyframes right {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        50% {
+                            transform: translateX(0.25rem);
+                            opacity: 0.5;
+                        }
+                        100% {
+                            transform: translateX(0.5rem);
+                            opacity: 0.25;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .certificationLeftSideNav {
+        margin-top: 2rem;
+    }
+
+    #certificationFooter {
+        padding: 0;
+        margin: 2rem 2rem 4rem 2rem !important;
+
+        @include respondTo(sm) {
+            margin: 2rem 2rem 6rem 2rem !important;
+        }
+        
+        @include respondTo(md) {
+            margin: 2rem;
+        }
+    }
+}

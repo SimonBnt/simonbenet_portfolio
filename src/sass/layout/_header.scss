@@ -1,0 +1,293 @@
+.dark {
+    background-color: $Dcolor-4;
+}
+
+#mainHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0px 5px 20px -5px $boxShadow;
+    font-weight: bold;
+    z-index: 1000;
+    transition: top 0.6s;
+    background-color: $Dcolor-4;
+    
+    @include respondTo(md) {
+        grid-template-columns: 0.5fr 3.5fr 4fr;
+        box-shadow: 0px 4px 10px -5px $boxShadow;
+        height: 6rem;
+    }
+
+    #logoContainer {
+        margin-left: 0.5rem;
+
+        @include respondTo(md) {
+            margin-left: 3.25rem;
+        }
+
+        #logo {
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px 0.1px $boxShadow;
+            transition: 0.6s;
+            border: solid  2px $DcColor-2;
+            
+            a {
+                cursor: auto;
+                text-decoration: none;
+                
+                @include respondTo(md) {
+                    cursor: pointer;
+                }
+
+                img {
+                    border-radius: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        .logo {
+            @include respondTo(md) {
+                // transform: translateY(-100px);
+            }
+        }
+    } 
+    
+    #dotContainer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 0 1rem;
+
+        @include respondTo(md) {
+            justify-content: start;
+        }
+        
+        .headerActionSpanDot {
+            margin-left: 0.5rem;
+            margin-right: 0.25rem;
+            border-radius: 50%;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px 0.1px $boxShadow;
+            border: solid 2px $DcColor-1;
+            transition: 0.6s;
+            background-color: #333;
+            
+            .day-nightImg {
+                width: 1rem;
+            }
+            
+            @include respondTo(md) {
+                margin-right: 1rem; 
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: $DcColor-2;
+                    transition: 0.6s;
+                }
+            }
+        }
+
+        #enMode {
+            display: grid;
+            place-items: center;
+            
+            a {
+                text-decoration: none;
+
+                img {
+                    width: 24px;
+                    display: block;
+                }
+            }
+        }
+
+        .enMode {
+            @include respondTo(md) {
+                // transform: translateY(-100px);
+            }
+        }
+        
+        #frMode {
+            a {
+                text-decoration: none;
+
+                img {
+                    width: 24px;
+                    display: block;
+                }
+            }
+        }
+
+        .frMode {
+            @include respondTo(md) {
+                // transform: translateY(-100px);
+            }
+        }
+        
+        #lightMode.active {
+            background-color: #e2e2e2;
+            transition: 0.6s;
+            
+            @include respondTo(md) {
+                &:hover {
+                    transition: 0.6s;
+                    background-color: $DcColor-2;
+                }
+            }
+        }
+
+        .lightMode {
+            @include respondTo(md) {
+                // transform: translateY(-100px);
+            }
+        }
+
+        #lightMode.noActive {
+            display: none;
+        }
+        
+        #darkMode.noActive {
+            display: none;
+            background-color: rgb(46, 46, 46);
+            
+            @include respondTo(md) {
+
+                &:hover {
+                    transition: 0.6s;
+                    background-color: $DcColor-2;
+                }
+            }
+        }
+
+        #darkMode.active {
+            display: flex;
+        }
+
+        .darkMode {
+            @include respondTo(md) {
+                // transform: translateY(-100px);
+            }
+        }
+    }   
+
+    #progressionScrollBar {
+        display: none;
+
+        @include respondTo(md) {
+            display: block;
+            height: 2px;
+            width: 0px;
+            position: fixed;
+            align-self: last baseline;
+            background: linear-gradient(to left, #fdc48e, #ff9735, #ff7b00);
+        }
+    }
+}
+
+.light {
+    #mainHeader {
+        background-color: #333;
+    
+        #logoContainer {
+            #logo {
+                border: solid  2px $DcColor-2;
+                background-color: #333;
+                color: $DcColor-1;
+
+                @include respondTo(md) {
+                    &:hover {
+                        background-color: $Lcolor-4;
+                    }
+                }
+                
+                a {
+                    color: $DcColor-1;
+                    transition: 0.6s;
+
+                    &:hover {
+                        color: $Lcolor-1;
+
+                    }
+                }
+            }
+        } 
+        
+        #dotContainer {
+            .headerActionSpanDot {
+                background-color: #333;
+                color: $DcColor-1;
+                border: solid 2px $DcColor-2;
+                transition: 0.6s;
+                
+                @include respondTo(md) {
+                    &:hover {
+                        background-color: $Lcolor-4;
+                        color: $Lcolor-1;
+                    }
+                }
+            }
+
+            #enMode {
+                a {
+                    color: $DcColor-1;
+                }
+            }
+
+            #frMode {
+                a {
+                    color: $DcColor-1;
+                }
+            }
+
+            #lightMode.active {
+                background-color: #e2e2e2;
+                transition: 0.6s;
+
+                @include respondTo(md) {
+                    &:hover {
+                        background-color: $DcColor-2;
+                        transition: 0.6s;
+                    }
+                }
+            }
+
+            #darkMode.active {
+                transition: 0.6s;
+                
+            }
+            
+            #darkMode.noActive {
+                background-color: rgb(46, 46, 46);
+                
+                @include respondTo(md) {
+                    &:hover {
+                        background-color: $DcColor-2;
+                    }
+                }
+            }
+        }   
+
+        #navbar {
+            background-color: #333;
+
+             .navbarSpan1 {
+                color: $DcColor-3;
+            }
+         }
+    }
+}

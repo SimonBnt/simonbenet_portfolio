@@ -1,0 +1,324 @@
+#workSection {
+    #workHeader {
+        margin-bottom: 0 !important;
+    }
+
+    #workP {
+        margin-bottom: 1rem;
+
+        @include respondTo(sm) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    #mainWorksContainer {
+        display: grid;
+        place-items: center;
+        gap: 2rem 0rem;
+        
+        @include respondTo(sm) {
+            gap: 2rem 2rem;
+        }
+        
+        @include respondTo(md) {
+            box-shadow: 0px -5px 20px -5px $boxShadow;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            border-radius: 0.5rem;
+            padding-top: 2rem;
+            background-color: $Dcolor-2;
+        }
+        
+        @include respondTo(lg) {
+            margin-right: 10%;   
+            margin-left: 10%;  
+        }
+
+        .workContainer {
+            position: relative;
+            box-shadow: 0 10px 20px -5px $boxShadow;
+            border-radius: 0.5rem;
+            max-width: 260px;
+            overflow-x: hidden;
+            border: solid 2px $DcColor-2;
+            
+            @include respondTo(sm) {
+                margin: 0 auto;
+                max-width: 320px;
+            }
+
+            @include respondTo(md) {
+                max-width: 360px;
+                transition: 0.4s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.4s;
+                }
+            }
+
+            .workImg {
+                display: block;
+                box-sizing: border-box;
+                object-fit: cover;
+                max-width: 100%;
+                background-repeat: no-repeat;
+            }
+            
+            .workDescriptionContainer {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                width: 60%;
+                height: 100%;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                top: 0;
+                right: 0;
+                transition: 0.4s;
+                background-color: rgba(250, 250, 250, 0.8);
+                
+                @include respondTo(sm) {
+                    overflow-y: hidden;
+                    width: 50%;
+                }
+
+                @include respondTo(md) {
+                    overflow-y: hidden;
+                    padding: 0 1rem;
+                }
+                
+                .workTitle {
+                    font-weight: bold;
+                    text-align: center;
+                    color: #333;
+                    
+                    @include respondTo(sm) {
+                        font-size: 1.25rem;
+                    }
+                    
+                    &.hide {
+                        display: none; 
+                    }
+                }
+                
+                .descriptionDecoration {
+                    width: 100px;
+                    height: 2px;
+                    background-color: #333;
+                    
+                    &.hide {
+                        display: none; 
+                    }
+                }
+                
+                .workDescription {
+                    text-align: center;
+                    font-weight: bolder;
+                    padding: 0 0.5rem;
+                    color: $Dcolor-4;
+                    
+                    .strongDescription {
+                        font-size: 1rem;
+                        color: #333;
+                    }
+                    
+                    &.hide {
+                        display: none; 
+                    }
+                }
+    
+                .descriptionLinkContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    &.hide {
+                        display: none;
+                    }
+    
+                    .githubWorkLink, .codepenWorkLink, .subdomainLink {
+                        margin: 0 0.5rem 0 0.5rem;
+                        text-decoration: 0;
+                        
+                        .githubIcone, .codepenIcone, .subdomainIcone {
+                            width: 20px;
+                            height: 20px;
+                            
+                            @include respondTo(sm) {
+                                transition: 0.8s;
+                                border-radius: 1rem;
+                                width: 32px;
+                                height: 32px;
+                            }
+
+                            @include respondTo(md) {
+                                transition: 0.8s;
+                                border-radius: 1rem;
+
+                                &:hover {
+                                    background-color: $DcColor-2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        #showMoreBtn, #showLessBtn {
+            all: unset;
+            border: solid 1px;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: $DcColor-1;
+            text-align: center;
+
+            @include respondTo(sm) {
+                grid-column: 1/3;
+                margin-bottom: 2rem;
+            }
+
+            @include respondTo(md) {
+                text-decoration: none;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                width: 140px;
+                height: 40px;
+                border: 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+                transition: 1s;
+    
+                &::before, &::after {
+                    position: absolute;
+                    z-index: -1;
+                    transition: 1s;
+                    content: '';
+                    background: $Dcolor-2;
+                }
+                
+                &::before {
+                    height: 60px;
+                    width: 140px;
+                }
+                
+                &::after {
+                    width: 160px;
+                    height: 40px;
+                }
+                
+                &:hover::before {
+                    width: 0px;
+                    background: $Dcolor-4;
+
+                }
+                
+                &:hover::after {
+                    height: 0px;
+                    background: $Dcolor-4;
+                }
+
+                &:hover {
+                    background: $Dcolor-4;
+                    border: solid #a8b2d1 1px;
+                    color: #a8b2d1;
+                }
+            }    
+        }
+    }
+}
+
+.light {
+    #workSection {
+        #mainWorksContainer {
+            @include respondTo(md) {
+                background-color: $Lcolor-2;
+            }
+                
+            .workContainer {
+                border: solid 2px $DcColor-2;
+
+                .workDescriptionContainer {
+                    background-color: rgba(250, 250, 250, 0.8);
+        
+                    .hideDescriptionBtn {
+                        background-color: $DcColor-3;
+                        border-right: 2px solid $Dcolor-4;
+                        border-bottom: 2px solid $Dcolor-4;
+        
+                        @include respondTo(md) {
+                            &:hover {
+                                background-color: $DcColor-1;
+                            }
+                        }
+                    }
+                    
+                    .workTitle {
+                        color: #333;
+                    }
+                    
+                    .descriptionDecoration {
+                        background-color: #333;
+                    }
+                    
+                    .workDescription {
+                        color: #333;
+        
+                        .strongDescription {
+                            color: #333;
+                        }
+                    }
+        
+                    .descriptionLinkContainer {
+                        .githubWorkLink, .codepenWorkLink {
+                            .githubMiniLogo, .codepenMiniLogo {
+                                @include respondTo(md) {
+                                    &:hover {
+                                        background-color: $DcColor-2;
+                                        border-radius: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            #showMoreBtn {
+                color: $DcColor-1;
+    
+                @include respondTo(md) {
+                    color: #333;
+        
+                    &::before, &::after {
+                        background: $Lcolor-2;
+                    }
+                    
+                    &:hover::before {
+                        background-color: $Lcolor-3;
+                    }
+                    
+                    &:hover::after {
+                        background-color: $Lcolor-3;
+                    }
+                    
+                    &:hover {
+                        background-color: $Lcolor-3;
+                    }
+        
+                    &:hover {
+                        border: solid $LcColor-1 1px;
+                    }
+                }    
+            }
+        }
+    }
+}

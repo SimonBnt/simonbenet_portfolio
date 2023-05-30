@@ -1,0 +1,125 @@
+#leftSideNav {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2rem;
+        border-radius: 1rem;
+        padding: 0.5rem 0;
+
+        @include respondTo (lg) {
+            padding: 0.5rem 0;
+        }
+
+        .socialLink {
+            list-style: none;
+
+            a {
+                margin: 0 0.5rem;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    @include respondTo(sm) {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    @include respondTo(md) {
+        margin: 0;
+        padding-left: 1.5rem;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        ul {
+            display: inline-block;
+            border-radius: inherit;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+            margin: 0;
+
+            &::after {
+                display: block;
+                content: "";
+                width: 1px;
+                height: 100px;
+                margin: 0 auto;
+                margin-top: 1.25rem;
+                background-color: #a8b2d1;
+            }
+
+            .socialLink {
+                padding: 0.25rem 0;
+                list-style: none;
+
+                a {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        padding: 0.25rem 0.25rem;
+                        transform: translateY(0px);
+                        transition: 0.4s;
+                        border-radius: 0.5rem;
+
+                        @include respondTo(md) {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        @include respondTo(md) {
+                            width: 24px;
+                            height: 24px;
+                        }
+                        
+                        &:hover {
+                            transform: translateY(-4px);
+                            transition: 0.4s;
+                            background-color: $Dcolor-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respondTo(lg) {
+        padding-left: 3rem;
+    }
+}
+
+.leftSideNav {
+    @include respondTo(md) {
+        // transform: translateX(-200px);
+    }
+}
+
+.light {
+    #leftSideNav {
+            
+        ul {
+            background-color: #333;
+        }
+        
+        @include respondTo(md) {
+
+            ul::after {
+                background-color: #a8b2d1;
+            }
+
+            .socialLink a {
+                img:hover {
+                    background-color: #1f1f1f;
+                } 
+            }
+        }
+    }
+}

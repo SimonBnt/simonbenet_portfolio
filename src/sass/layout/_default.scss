@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+    body {
+        font-family: $font1;
+        
+        h1, h2 , h3 {
+            font-weight: 500;
+        }
+
+        button {
+            @include respondTo(md) {
+                cursor: pointer;
+            }
+        }
+
+        strong {
+            font-weight: normal;
+        }   
+    }
+}

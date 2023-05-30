@@ -1,0 +1,125 @@
+#legalNoticeMain {
+    margin: 6rem 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+
+    @include respondTo(md) {
+        margin: 8rem 10%;
+    }
+
+    #infos {
+        color: $txtColor;
+        line-height: 1.5rem;
+
+        @include respondTo(md) {
+            padding-left: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: $DcColor-1;
+            text-align: center;
+
+            @include respondTo(md) {
+                text-align: inherit;
+            }
+        }
+
+        #infoMainContainer {
+            text-align: end;
+            padding-right: 1rem;
+            
+            @include respondTo(md) {
+                padding-right: inherit;
+                text-align: inherit;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            #infoContainer {
+                p strong {
+                    color: $DcColor-3;
+                }
+
+                h2 {
+                    font-size: 1.25rem;
+                    margin: 1rem 0;
+                    color: $DcColor-2;
+                }
+            }
+        }
+
+        #decoration {
+            text-align: center;
+            width: 80%;
+            height: 2px;
+            background-color: #eee;
+            margin: 2rem auto;
+        }
+
+        #legalNoticeMainContainer {
+            padding-left: 1rem;
+            
+            @include respondTo(md) {
+                padding-left: 0;
+            }
+            
+            .legalNoticeContainer {
+                h2 {
+                    font-size: 1.5rem;
+                    margin: 2rem 0;
+                    color: $DcColor-2;
+                    text-align: start;
+                }
+                
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.light {
+    #legalNoticeMain {
+        background-color: #eee;
+    #infos {
+        color: #333;
+
+        h1 {
+            color: $DcColor-1;
+        }
+
+        #infoMainContainer {
+            #infoContainer {
+                p strong {
+                    color: $DcColor-4;
+                    font-weight: bold;
+                }
+
+                h2 {
+                    color: $DcColor-2;
+                }
+            }
+        }
+
+        #decoration {
+            background-color: #eee;
+        }
+
+        #legalNoticeMainContainer {
+            .legalNoticeContainer {
+                h2 {
+                    color: $DcColor-2;
+                }
+
+                p strong {
+                    color: $DcColor-4;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+}

@@ -1,0 +1,242 @@
+main {
+    padding: 0 2rem;
+
+    @include respondTo(md) {
+        padding: inherit;
+    }
+        
+    .defaultSection{
+        box-shadow: 0 10px 20px -10px $boxShadow;
+        border-radius: 0.5rem;
+        padding: 1rem 1rem 2rem 1rem;
+        margin-bottom: 4rem;
+        background-color: $Dcolor-3;
+        position: relative;
+
+        @include respondTo(md) {
+            box-shadow: none;
+            background-color: inherit;
+            margin-right: 5%;   
+            margin-left: 5%; 
+        }
+
+        @include respondTo(lg) {
+            margin-right: 10%;   
+            margin-left: 10%;  
+        }
+
+        @include respondTo(desktop) {
+            margin-right: 15%;   
+            margin-left: 15%;  
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 20px solid transparent;
+            border-top: 20px solid $DcColor-2;
+            border-right: 20px solid $DcColor-2;
+            border-top-right-radius: 0.25rem;
+        }
+        
+        .headerSection {
+            margin-bottom: 1rem;
+            background-color: $Dcolor-3;
+
+            @include respondTo(md) {
+                margin-bottom: 2rem;
+                background-color: inherit;
+            }
+            
+            .sectionH2 {
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                color: $txtColor;
+
+                @include respondTo(sm) {
+                    padding-left: 2rem;
+                }
+    
+                @include respondTo(md) {
+                    font-size: 2.5rem;
+                    padding-left: 4rem;
+                }
+
+                .categoryNumber{
+                    font-size: 1.25rem;
+                    color: $DcColor-2;
+
+                    @include respondTo(md) {
+                        font-size: 1.75rem;
+                    }
+                }
+
+                .categoryDecoration {
+                    display: none;
+                    height: 1px;
+                    background-color: #a8b2d1;
+
+                    @include respondTo(sm) {
+                        display: block;
+                        width: 40%;
+                    }
+
+                    @include respondTo(md) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .sectionP {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color:  $txtColor;
+            
+            @include respondTo(md) {
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+        }
+        
+        .mep::first-letter {
+            margin-left: 2rem;
+        }
+    }
+
+    #homeSection::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: 20px solid transparent;
+        border-bottom: 20px solid $DcColor-2;
+        border-left: 20px solid $DcColor-2;
+        border-bottom-left-radius: 0.25rem;
+    }
+    
+    a {
+        text-decoration: none;
+
+        @include respondTo(md) {
+            cursor: pointer;
+        }
+    }
+
+    .contentA {
+        position: relative;
+
+        strong {
+            img {
+                transform: translateY(6px);
+                width: 26px;
+                height: 26px;
+                padding: 0;
+            }
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            transform-origin: bottom right;
+            transition: transform 0.6s ease-out;
+            background-color: $DcColor-2;
+        }
+
+        &:hover {
+            transition: 0.4s;
+            color: $DcColor-2;
+
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
+    strong {
+        color:  $DcColor-3;
+    }
+
+    .modalA {
+        strong {
+            border: 1px solid $DcColor-2;
+            color: $LcColor-3 !important;
+        }
+    }
+}
+
+.light {
+    background-color: $Lcolor-1;
+    #main {
+        background-color: $Lcolor-1;
+
+        .defaultSection {
+            background-color: $Lcolor-1;
+            
+            @include respondTo(md) {
+                background-color: $Lcolor-1;
+            }
+            
+            .headerSection {
+                background-color: $Lcolor-1;
+                
+                @include respondTo(md) {
+                    background-color: inherit;
+                }
+    
+                h2 {
+                    color: $darkTxtColor;
+                }
+    
+                .categoryNumber{
+                    color: $DcColor-2;
+                }
+    
+                .categoryDecoration{
+                    background-color: #333;
+                }
+            }
+    
+            .sectionP {
+                color: $darkTxtColor;
+            }
+    
+            .contentA {
+                &::after {
+                    background-color: $DcColor-2;
+                }
+        
+                &:hover {
+                    color: $DcColor-2;
+                }
+            }
+    
+            strong {
+                color:  $LcColor-3;
+            }
+
+            &::before {
+                border-top: 20px solid #333;
+                border-right: 20px solid #333;
+            }
+        }
+
+        #homeSection::after {
+            border-bottom: 20px solid #333;
+            border-left: 20px solid #333;
+        }
+    }
+}
+

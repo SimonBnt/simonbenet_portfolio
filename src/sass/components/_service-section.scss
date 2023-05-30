@@ -1,0 +1,415 @@
+#serviceSection {
+    @include respondTo(md) {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+    }
+
+    .serviceContainer {
+        line-height: 1.25rem;
+        
+        .serviceTitle {
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: right;
+            margin: 0 1rem 1rem 0;
+            color: $DcColor-2;
+            
+            @include respondTo(md) {
+                margin-bottom: 2rem;
+                font-size: 1.75rem;    
+            }
+        }
+        
+        p {
+            margin: 0 1rem 1rem 0;
+            text-align: right;
+            font-weight: bolder;
+            font-size: 1rem;
+            
+            @include respondTo(md) {
+                margin-bottom: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+        
+        .serviceImgContainer {
+            display: flex;
+            place-items: center;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            gap: 0 1rem;
+            border: solid 2px $DcColor-1;
+            border-radius: 0.5rem;
+            width: 260px;
+            height: 160px;
+            box-shadow: 0px 10px 20px -5px $boxShadow;
+            margin: 0 auto;
+            
+            @include respondTo(sm) {
+                width: 320px;
+                height: 200px;
+                gap: 0 2rem;
+            }
+            
+            @include respondTo(md) {
+                overflow: inherit;
+                width: inherit;
+                height: inherit;
+                border: inherit;
+                box-shadow: inherit;
+                width: 365px;
+                height: 210px;
+                margin: inherit;
+                padding-bottom: 2rem;
+            }
+            
+            .serviceImg {
+                box-sizing: border-box;
+                box-shadow: 0px 10px 20px -5px $boxShadow;
+                border-radius: 0.5rem;
+                width: 100%;
+                height: 100%;
+                flex: none;
+                scroll-snap-align: center;
+                
+                
+                @include respondTo(sm) {
+                    margin: 1rem auto;
+                }
+
+                @include respondTo(md) {
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.4s;
+                    }
+                }
+            }
+
+        }
+
+        // .scrollXAnimContainer {    
+        //     background-color: $Dcolor-1;
+        //     width: 50px;
+        //     height: 15px;
+        //     border-radius: 0.25rem;
+        //     place-items: center;
+        //     display: flex;
+        //     margin: 1rem auto 2rem auto;
+        //     box-shadow: 0px 10px 20px -5px $boxShadow;
+
+        //     @include respondTo(md) {
+        //         display: none;
+        //     }
+            
+        //     .scrollXAnim {
+        //         width: 10px;
+        //         background-color: $DcColor-2;
+        //         height: 10px;
+        //         margin: 0 auto;
+        //         border-radius: 100%;
+        //         animation: scrollX 1s 0s infinite ease-in;
+        //     }   
+        
+        //     @keyframes scrollX {
+        //         0% {
+        //             transform: translateX(10px);
+        //             opacity: 1;
+        //         }
+        //         25% {
+        //             transform: translateX(5px);
+        //             opacity: 0.75;
+        //         }
+        //         50% {
+        //             transform: translateX(-10px);
+        //             opacity: 0.5;
+        //         }
+        //         75% {
+        //             transform: translateX(-15px);
+        //             opacity: 0.25;
+        //         }
+        //         100% {
+        //             transform: translateX(-20px);
+        //             opacity: 0.2;
+        //             color: #333;
+        //         }
+        //     }
+        // }
+
+        #adviceAndContact {
+            box-shadow: 0px 10px 20px -5px $boxShadow;
+            border-radius: 0.5rem;
+            padding: 1rem 0;
+            text-align: center;
+            padding-bottom: 2rem;
+            line-height: 1.5rem;
+            background-color: $Dcolor-2;
+            margin-top: 2rem;
+            
+            @include respondTo(sm) {
+                margin-top: 0;
+            }
+    
+            @include respondTo(md) {
+                margin-top: 3rem;
+                margin-right: 10%;   
+                margin-left: 10%; 
+                padding: 1rem 2rem;
+                line-height: 2rem;
+            }
+
+            @include respondTo(lg) {
+                margin-right: 15%;   
+                margin-left: 15%;  
+            }
+            
+            ul {
+                text-align: left;
+                font-weight: bolder;
+                margin: 0.5rem 1rem 2rem 1rem;
+                list-style: none;
+                color: $txtColor;
+    
+                li {
+                    @include respondTo(sm) {
+                        font-size: 1.25rem;
+                    }
+                }
+    
+                li::before {
+                    content: "- ";
+                }
+            }
+    
+            #contactMe {
+                text-decoration: none;
+                border: solid 1px;
+                border-radius: 0.25rem;
+                padding: 0.5rem;
+                margin: 0 auto;
+                font-weight: bold;
+                color: $DcColor-1;
+    
+                @include respondTo(md) {
+                    color: $DcColor-1;
+                    text-decoration: none;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                    width: 140px;
+                    height: 40px;
+                    border: 1px solid;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 1;
+                    transition: 1s;
+
+                    &:hover {
+                        background: $Dcolor-4;
+                        border: solid #a8b2d1 1px;
+                        color: #a8b2d1;
+                    }
+    
+                    &::before, &::after {
+                        position: absolute;
+                        z-index: -1;
+                        transition: 1s;
+                        content: '';
+                        background: $Dcolor-2;
+                    }
+                    
+                    &::before {
+                        height: 60px;
+                        width: 140px;
+                    }
+                    
+                    &::after {
+                        width: 160px;
+                        height: 40px;
+                    }
+                    
+                    &:hover::before {
+                        width: 0px;
+                        background: $Dcolor-4;
+                    }
+                    
+                    &:hover::after {
+                        height: 0px;
+                        background: $Dcolor-4;
+                    }
+                }
+            }
+        }
+    }
+
+    #serviceDescriptionMainContainer {
+        display: grid;
+        place-content: center;
+        gap: 2rem 0;
+        margin: 2rem auto;
+        box-shadow: 0px 10px 20px -5px $boxShadow;
+        border-radius: 0.25rem;
+        padding: 2rem 0;
+        background-color: $Dcolor-2;
+
+        @include respondTo(md) {
+            display: flex;
+            background-color: inherit;
+            box-shadow: inherit;
+            padding: 0;
+            margin: 2rem auto;
+        }
+
+        .serviceDescriptionContainer {
+            text-align: center;
+            line-height: 2.5rem;
+            margin: 0;
+            
+            @include respondTo(md) {
+                display: grid;
+                place-items: center;
+                gap: 1rem 0;
+                grid-template-rows: 0.25fr 0.25fr 0.25fr;
+                width: 360px;
+            }
+
+            .serviceIcons{
+                width: 32px;
+                transition-duration: 1.2s;
+
+                @include respondTo(md) {
+                    &:hover {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+            
+            .serviceDescriptionTitle {
+                color: $DcColor-3;
+                font-size: 1.5rem;
+
+                @include respondTo(sm) {
+                    font-size: 1.75rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+                
+                @include respondTo(sm) {
+                    font-size: 1.25rem;
+                }
+                
+                @include respondTo(md) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+    .serviceDecoration {
+        display: none;
+
+        @include respondTo(sm) {
+            display: block;
+            margin: 2rem auto;
+            height: 1px;
+            width: 50%;
+            background-color: #a8b2d1;
+        }
+    }
+}
+
+.light {
+    #serviceSection {
+        .serviceContainer {
+            .serviceTitle {
+                color: $DcColor-1;
+        
+                p {
+                    color: $txtColor;
+                }
+             }
+        
+            .serviceImgContainer {
+                .serviceImg {
+                        border: 2px solid $LcColor-2;
+                }
+            }
+    
+            #adviceAndContact {
+                background-color: $Lcolor-2;
+                
+                ul {
+                    color: $darkTxtColor;
+                }
+    
+                #contactMe {
+                    color: $DcColor-1;
+    
+                    @include respondTo(md) {
+                        color: #333;
+    
+                        &::before, &::after {
+                            background: $Lcolor-2;
+                        }
+                        
+                        &:hover::before {
+                            background: $Lcolor-4;
+                        }
+                        
+                        &:hover::after {
+                            background: $Lcolor-4;
+                        }
+                        
+                        &:hover {
+                            background: $Lcolor-4;
+                        }
+
+                        &:hover {
+                            border: solid $LcColor-1 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #serviceDescriptionMainContainer {
+            .serviceDescriptionContainer {
+                .serviceDescriptionTitle {
+                    color: $DcColor-2;
+                }
+            }
+        }
+    
+        .serviceDecoration {
+            background-color: #333;
+        }
+
+        .scrollXAnimContainer {    
+            background-color: #333;
+
+            .scrollXAnim {
+                background-color: $DcColor-2;
+            }   
+        }
+
+        #serviceDescriptionMainContainer {
+            background-color: #ececec;
+    
+            @include respondTo(md) {
+                background-color: inherit;
+                box-shadow: inherit;
+            }
+    
+            .serviceDescriptionContainer {
+                .serviceDescriptionTitle {
+                    color: $DcColor-2;
+                }
+            }
+        }
+    }
+}

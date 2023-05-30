@@ -1,0 +1,24 @@
+#myPixelChestBody {
+    overflow: hidden;
+    
+    #myPixelChestSection {
+        display: grid;
+        place-items: center;
+        margin: 10rem 0;
+
+        p {
+            margin: 2rem auto;
+            color: $DcColor-2;
+            text-decoration: underline;
+            text-decoration-style: double;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    &.light {
+        #myPixelChestSection p { 
+                color: #333;
+        }
+    }
+}

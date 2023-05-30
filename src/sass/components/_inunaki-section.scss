@@ -1,0 +1,40 @@
+#inunakiBody {
+    overflow: hidden;
+    
+    #inunakiSection {
+        display: grid;
+        place-items: center;
+        margin: 8rem 0;
+
+        img {
+            width: 20rem;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            background-color: $Dcolor-3;
+            box-shadow: 0 10px 20px -10px $boxShadow;
+        }
+
+        p {
+            margin: 2rem auto;
+            color: $DcColor-2;
+            text-decoration: underline;
+            text-decoration-style: double;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    &.light {
+        #inunakiSection { 
+            img {
+                background-color: $DcColor-2;
+
+            }
+            
+            p {
+                color: #333;
+            }
+        }
+    }
+}
+

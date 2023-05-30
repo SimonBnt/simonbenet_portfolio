@@ -1,0 +1,247 @@
+.openModal {
+    text-decoration: underline $DcColor-2 2px;
+    text-decoration-style: dotted;
+
+    strong {
+        font-weight: bolder;
+        color: $DcColor-2;
+        
+        @include respondTo(md) {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.modal {
+    z-index: 2000;
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    .modalContainer {
+        background-color: white;
+        max-width: 90dvw;
+        max-height: 80dvh;
+        overflow-x: hidden;
+        margin: auto;
+        flex: 1;
+        border: solid #333 2px;
+        border-radius: 0.5rem;
+        position: relative;
+        text-align: center;
+
+        @include respondTo(sm) {
+            max-width: 80dvw;
+        }
+
+        @include respondTo(md) {
+            max-width: 40dvw;
+        }
+
+        .modalHeader {
+            background-color: $Dcolor-4;
+            padding: 2rem 0;
+            position: relative;
+            
+            @include respondTo(sm) {
+                padding: 1rem 0;
+            }
+
+
+            .closeModalBtn {
+                position: absolute;
+                background-color: unset;
+                border: none;
+                top: 0;
+                right: 0.5rem;
+                color: $DcColor-1;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: right;
+
+                @include respondTo(md) {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: silver;
+                    }
+                }
+            }
+    
+            .modalTitle {
+                color: $DcColor-3;
+                font-size: 1.5rem;
+
+                @include respondTo(sm) {
+                    font-size: 2rem;    
+                }
+
+                @include respondTo(md) {
+                    font-size: 2.5rem;    
+                }
+            }
+        }
+
+        .mainContainer {
+            display: flex;
+            place-content: center;
+            flex-direction: column;
+            gap: 1rem 0;
+            margin: 1rem 1rem;
+            font-weight: bolder;
+            line-height: 1.25rem;
+        }
+
+        #vptcsMainContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .vptcsContainer {
+                display: grid;    
+                gap: 1rem;            
+
+                .vptcsMaj {
+                    color: $DcColor-2;
+                    font-size: 1.5rem;
+                    padding-top: 1rem;
+                }
+                p {
+                    color: #333;
+                    margin: 0 1rem;
+                    font-weight: bold;
+                }
+
+                .vptcsMiniP {
+                    font-size: 1rem;
+                    font-weight: lighter;
+                }
+            }
+
+        }
+
+        .modalAContainer {
+            padding: 0.5rem;
+            border: 2px solid #333;
+            border-radius: 0.5rem;
+            width: fit-content;
+            margin: 1rem auto;
+
+            .modalA {
+                margin: 0 auto;
+                width: 64px;
+                height: 64px;
+                color: #333;                    
+            }
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .modalFooter {
+            background-color: $Dcolor-4;
+            padding: 1rem 0;
+
+            .bottomCloseModalBtn {
+                all: unset;
+                border: 2px solid $DcColor-2;
+                border-radius: 0.5rem;
+                color: $DcColor-2;
+                padding: 0.5rem;
+                font-weight: bold;
+
+                @include respondTo(md) {
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $Dcolor-2;
+                        color: silver;
+                        border: 2px solid silver;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.light {
+    .openModal {
+        text-decoration: underline $DcColor-4 2px;
+        text-decoration-style: dotted;
+
+        strong {
+            color: $DcColor-4 !important;
+        }
+    }
+    
+    .modal {
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        .modalContainer {
+            background-color: white;
+            border: solid 2px $DcColor-1;
+    
+            .modalHeader {
+                background-color: #333;
+    
+                .closeModalBtn {
+                    color: $DcColor-1;
+    
+                    @include respondTo(md) {
+                        &:hover {
+                            color: silver;
+                        }
+                    }
+                }
+        
+                .modalTitle {
+                    color: $DcColor-2;
+                }
+            }
+            #vptcsMainContainer {
+                .vptcsContainer {
+                    .vptcsMaj {
+                        color: $DcColor-2;
+                    }
+                    p {
+                        color: #333;
+                    }
+                }
+    
+            }
+    
+            .modalAContainer {
+                border: 2px solid #333;
+    
+                .modalA {
+                    color: #333;                    
+                }
+            }
+    
+            .modalFooter {
+                background-color: #333;
+    
+                .bottomCloseModalBtn {
+                    border: 2px solid $DcColor-2;
+                    color: $DcColor-2;
+    
+                    @include respondTo(md) {
+    
+                        &:hover {
+                            background-color: silver;
+                            color: #333;
+                            border: 2px solid #eee;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

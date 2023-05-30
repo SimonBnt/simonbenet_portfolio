@@ -1,0 +1,79 @@
+#moreSectionMainContainer {
+    text-align: center;
+
+    @include respondTo(md) {
+        display: grid;
+        // grid-template-rows: 1fr 1fr 1fr;
+        // place-items: center;
+        flex-direction: column;
+        // row-gap: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        color: $DcColor-3;
+        
+        @include respondTo(md) {
+            text-decoration: overline;
+        }
+    }
+
+    div {
+        display: grid;
+        gap: 0;
+        text-align: center;
+        
+        @include respondTo(md) {
+            display: inherit;
+        }
+        
+        a {
+            margin: 1rem auto;
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0px 10px 20px -5px $boxShadow;
+            color: $DcColor-3;
+            border: solid 2px $DcColor-2;
+            background-color: $Dcolor-2;
+            
+            @include respondTo(sm) {
+                font-size: 1.5rem;
+            }
+
+            @include respondTo(md) {
+                &:hover {
+                    border: solid 2px silver;
+                    color: silver;
+                    background-color: $Dcolor-4;
+                    transition: 0.6s;
+                }
+            }
+        }
+    }
+}
+
+.light {
+    #moreSection {
+        h3 {
+            color: $DcColor-1;
+        }
+
+        a {
+            color: #333;
+            background-color: silver;
+            border: solid 2px #333;
+            
+            @include respondTo(md) {
+                &:hover {
+                    border: solid 2px $DcColor-1;
+                    color: $DcColor-1;
+                    background-color: #333;
+                    transition: 0.6s;
+                }
+            }
+
+        }
+    }
+}

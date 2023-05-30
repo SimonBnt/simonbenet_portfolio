@@ -1,0 +1,28 @@
+[
+    {
+        "workImgSrc" : "/assets/img/workCardImg/MoC.png",
+        "h3" : "Site vitrine 'Restaurateur'",
+        "enH3" : "Restaurant showcase website",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript, php, mysql",
+        "subdomainHref" : "",
+        "githubHref" : "https://github.com/SimonBnt/Marche_ou_cepes_site_vitrine_restaurateur",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration 'site vitrine restaurateur'",
+        "enWorkImgAlt" : "'Restaurant showcase website' illustration image"
+    },
+    {
+        "workImgSrc" : "/assets/img/workCardImg/portfolio.png",
+        "h3" : "Portfolio I",
+        "enH3" : "Portfolio I",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript, gsap",
+        "subdomainHref" : "",
+        "githubHref" : "https://github.com/SimonBnt/Portfolio/tree/main/simonbenet_portfolio",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration de portfolio",
+        "enWorkImgAlt" : "Portfolio illustration image"
+    }
+]

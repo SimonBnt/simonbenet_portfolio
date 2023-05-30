@@ -1,0 +1,182 @@
+footer.default {
+    padding: 0 2rem;
+    margin: 0 1rem;
+    margin-bottom: 6rem !important;
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    #footerContentContainer {
+        padding: 0.5rem;
+        box-shadow: 0px -5px 20px -5px $boxShadow;
+        border-radius: 0.5rem;
+        background-color: $Dcolor-3;
+
+        @include respondTo(sm) {
+            padding: 1rem 1.5rem;
+        }
+        
+        @include respondTo(md) {
+            position: relative;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover {
+                #specContainer {
+                    right: -150px;
+                    transition: 1s;
+
+                    // @include respondTo(md) {
+                    //     background-color: $Dcolor-3;
+                    // }
+                }
+            }
+        }
+
+        p {
+            color: $txtColor;
+    
+            strong {
+                color: $DcColor-1;
+            }
+        }
+        
+        address {
+            margin-top: 0.25rem;
+            color: $DcColor-3;
+        }
+
+        #specContainer {
+            
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            li {
+                list-style: none;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            @include respondTo(md) {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                height: 50px;
+                box-shadow: 0px -5px 20px -5px $boxShadow;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                right: -10px;
+                transition: 1s;
+                z-index: -1;
+                background-color: $Dcolor-3;
+            }
+        }
+
+        #companyName {
+            margin-top: 1rem;
+            color: $DcColor-1;
+        }
+
+        #information {
+            margin-top: 0.5rem;
+
+            @include respondTo(sm) {
+                display: flex;
+                gap: 0 2rem;
+            }
+
+            #siret {
+                color: $txtColor;
+                text-decoration: none;
+
+                strong {
+                    color: $DcColor-2;
+
+                    @include respondTo(md) {
+                        &:hover {
+                            transition: 0.4s;
+                            color: $txtColor;
+                        }
+                    }
+                }
+            }
+
+            #legalNotice {
+                color: $txtColor;
+                text-decoration: none;
+
+                @include respondTo(md) {
+                    &:hover {
+                        transition: 0.4s;
+                        color: $DcColor-2;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+footer.onScroll {
+    margin-bottom: 2rem;
+}
+
+.light {
+    footer {
+        #footerContentContainer {
+            background-color: $Lcolor-1;
+            
+            #specContainer {
+                background-color: $Lcolor-1;
+            }
+            
+            p {
+                color: $darkTxtColor;
+    
+                strong {
+                    color: $LcColor-1;
+                }
+            }
+
+            address {
+                color: $DcColor-2;
+            }
+
+            #information {
+                #siret {
+                    color: #333;
+    
+                    strong {
+                        color: $DcColor-2;
+    
+                        &:hover {
+                            color: #333;
+                        }
+                    }
+                }
+    
+                #legalNotice {
+                    color: #333;
+    
+                    &:hover {
+                        color: $DcColor-2;
+                    }
+                }
+            }
+        }
+    }
+}
