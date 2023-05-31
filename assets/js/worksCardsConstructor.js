@@ -11,15 +11,15 @@ showMoreBtn.setAttribute("id", "showMoreBtn")
 showMoreBtn.style.display = "none"
 // showLessBtn.style.display = "none"
 
-// if (mainWorksContainer.className == "enVersion") {
-//     showMoreBtn.style.display = ""
-//     showMoreBtn.setAttribute("title", "Show more result")
-//     showMoreBtn.innerText = "Show more"
-// } else {
-//     showMoreBtn.style.display = ""
-//     showMoreBtn.setAttribute("title", "Afficher plus de resultat")
-//     showMoreBtn.innerText = "Afficher plus"
-// }
+if (mainWorksContainer.className == "enVersion") {
+    showMoreBtn.style.display = ""
+    showMoreBtn.setAttribute("title", "Show more result")
+    showMoreBtn.innerText = "Show more"
+} else {
+    showMoreBtn.style.display = ""
+    showMoreBtn.setAttribute("title", "Afficher plus de resultat")
+    showMoreBtn.innerText = "Afficher plus"
+}
 
 showMoreBtn.addEventListener("click", () => {
     if ((cardLimit + 4) <= jsonLenght) {
@@ -97,7 +97,7 @@ const createCards = (work) => {
         
         if (work["subdomainHref"] !== "") {
             subdomainLink.classList.add("subdomainLink")
-            subdomainLink.setAttribute("href", work["githubHref"])
+            subdomainLink.setAttribute("href", work["subdomainHref"])
             subdomainLink.setAttribute("rel", "noopener")
             subdomainLink.setAttribute("target", "_blank")
             

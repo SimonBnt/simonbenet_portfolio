@@ -18,11 +18,24 @@
         "enH3" : "Portfolio I",
         "description" : "",
         "enDescription" : "",
-        "strong" : "html5, scss, javascript, gsap",
+        "strong" : "html5, scss, javascript",
         "subdomainHref" : "",
         "githubHref" : "https://github.com/SimonBnt/Portfolio/tree/main/simonbenet_portfolio",
         "codepenHref" : "",
         "workImgAlt" : "Image d'illustration de portfolio",
         "enWorkImgAlt" : "Portfolio illustration image"
+    },
+    {
+        "workImgSrc" : "/assets/img/workCardImg/filosofy.png",
+        "h3" : "Filosofy",
+        "enH3" : "Filosofy",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript",
+        "subdomainHref" : "http://filosofy.simonbenet.com/index.html",
+        "githubHref" : "https://github.com/SimonBnt/Filosofy",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration du site web 'Filosofy'",
+        "enWorkImgAlt" : "'Filosofy' website illustration'"
     }
 ]
