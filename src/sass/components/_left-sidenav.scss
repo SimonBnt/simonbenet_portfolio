@@ -1,4 +1,6 @@
 #leftSideNav {
+    padding: 0;
+
     ul {
         display: flex;
         justify-content: center;
@@ -6,6 +8,7 @@
         margin: 0 2rem;
         border-radius: 1rem;
         padding: 0.5rem 0;
+
 
         @include respondTo (lg) {
             padding: 0.5rem 0;
@@ -32,7 +35,6 @@
 
     @include respondTo(md) {
         margin: 0;
-        padding-left: 1.5rem;
         position: fixed;
         z-index: 1000;
         bottom: 0;

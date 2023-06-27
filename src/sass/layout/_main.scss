@@ -1,6 +1,14 @@
 main {
     padding: 0 2rem;
 
+    @include respondTo(320px) {
+        padding: 8px
+    }
+
+    @include respondTo(sm) {
+        padding: 16px
+    }
+
     @include respondTo(md) {
         padding: inherit;
     }
@@ -12,6 +20,14 @@ main {
         margin-bottom: 4rem;
         background-color: $Dcolor-3;
         position: relative;
+
+        @include respondTo(320px) {
+            padding: 8px
+        }
+
+        @include respondTo(sm) {
+            padding: 16px
+        }
 
         @include respondTo(md) {
             box-shadow: none;
