@@ -1,6 +1,6 @@
 @mixin respondTo($breakpoint) {
     @if ($breakpoint == 320px) {
-        @media (min-width: 320px) and (max-width: 479px) {
+        @media (min-width: 320px){
             @content;
         }
     }

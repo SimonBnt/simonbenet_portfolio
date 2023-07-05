@@ -37,5 +37,18 @@
         "codepenHref" : "",
         "workImgAlt" : "Image d'illustration du site web 'Filosofy'",
         "enWorkImgAlt" : "'Filosofy' website illustration'"
+    },
+    {
+        "workImgSrc" : "/assets/img/workCardImg/modernJSForm.png",
+        "h3" : "Formulaire Javascript Moderne",
+        "enH3" : "Modern Javascript Form",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript",
+        "subdomainHref" : "http://modernjsform.simonbenet.com/",
+        "githubHref" : "https://github.com/SimonBnt/ModernJavaScriptForm",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration du site web 'Formulaire Javascript Moderne'",
+        "enWorkImgAlt" : "'Modern javascript form' website illustration'"
     }
 ]
