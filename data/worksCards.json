@@ -50,5 +50,31 @@
         "codepenHref" : "",
         "workImgAlt" : "Image d'illustration du site web 'Formulaire Javascript Moderne'",
         "enWorkImgAlt" : "'Modern javascript form' website illustration'"
+    },
+    {
+        "workImgSrc" : "assets/img/workCardImg/piano&calculatorJs.png",
+        "h3" : "Piano & calculatrice Js",
+        "enH3" : "Piano & calculator Js",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript, web audio api",
+        "subdomainHref" : "https://pianoandcalculatorjs.simonbenet.com/",
+        "githubHref" : "https://github.com/SimonBnt/PianoAndCalculatorJs",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration du site web 'Piano & calculatrice Js'",
+        "enWorkImgAlt" : "'Piano & calculator Js' website illustration'"
+    },
+    {
+        "workImgSrc" : "assets/img/workCardImg/mailsignature.png",
+        "h3" : "Gallerie d'HTML mail signatures réactifs",
+        "enH3" : "Responsive HTML Mail Signature Gallery",
+        "description" : "",
+        "enDescription" : "",
+        "strong" : "html5, scss, javascript",
+        "subdomainHref" : "https://responsivehtmlmailsignaturegallery.simonbenet.com",
+        "githubHref" : "https://github.com/SimonBnt/ResponsiveHTMLMailSignatureGallery",
+        "codepenHref" : "",
+        "workImgAlt" : "Image d'illustration du site web 'responsivehtmlmailsignaturegallery'",
+        "enWorkImgAlt" : "'responsivehtmlmailsignaturegallery' website illustration'"
     }
 ]
